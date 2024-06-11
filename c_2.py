@@ -42,24 +42,26 @@ if __name__ == '__main__':
 
     min_2 = min(this_min)
 
-    plt.errorbar(numpy.array(time), numpy.array(brightness), linestyle='none', marker='o', markersize=1)
+    plt.errorbar(numpy.array(time), numpy.array(brightness),
+                 yerr=brightness_err, linestyle='None', marker='.', markersize=1, alpha=0.5)
     plt.xlabel('Time (days)')
     plt.ylabel('Brightness (solar luminosity)')
     plt.axhline(y=brighness_min, color='k', linestyle='--', linewidth=0.2)
     plt.axhline(y=min_2, color='k', linestyle='--', linewidth=0.2)
     plt.show()
+word
 
-
-    this_min = []
-    for index in indexes:
-        this_min.append(brightness_frac[index])
-
-    min_2 = min(this_min)
-    brightness_frac_min = min(brightness_frac)
-
-    plt.errorbar(numpy.array(time), numpy.array(brightness_frac), linestyle='none', marker='o', markersize=1)
-    plt.xlabel('Time (days)')
-    plt.ylabel('Brightness Fraction(solar luminosity)')
-    plt.axhline(y=brightness_frac_min, color='k', linestyle='--', linewidth=0.2)
-    plt.axhline(y=min_2, color='k', linestyle='--', linewidth=0.2)
-    plt.show()
+    #
+    # this_min = []
+    # for index in indexes:
+    #     this_min.append(brightness_frac[index])
+    #
+    # min_2 = min(this_min)
+    # brightness_frac_min = min(brightness_frac)
+    #
+    # plt.errorbar(numpy.array(time), numpy.array(brightness_frac), linestyle='none', marker='o', markersize=1)
+    # plt.xlabel('Time (days)')
+    # plt.ylabel('Brightness Fraction(solar luminosity)')
+    # plt.axhline(y=brightness_frac_min, color='k', linestyle='--', linewidth=0.2)
+    # plt.axhline(y=min_2, color='k', linestyle='--', linewidth=0.2)
+    # plt.show()
